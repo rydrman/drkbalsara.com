@@ -1,0 +1,60 @@
+{{- $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Params.brand) -}}
+{{- with .Params.metaTitle }}{{ $title = . }}{{ end -}}
+{{- $desc := cond (ne (.Params.description | default "") "") .Params.description site.Params.description -}}
+{{- $canonical := .Permalink -}}
+{{- $ogImage := absURL (site.Params.ogImage | default "/og-image.jpg") -}}
+{{- with .Params.ogImage }}{{ $ogImage = absURL . }}{{ end -}}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="{{ site.Params.themeColor }}">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+{{ with .Params.keywords -}}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end }}
+<link rel="canonical" href="{{ $canonical }}">
+<meta name="author" content="{{ site.Params.author }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+{{/* Geo signals (legacy but harmless and still parsed by some engines) */}}
+<meta name="geo.region" content="{{ site.Params.geoRegion }}">
+<meta name="geo.placename" content="{{ site.Params.geoPlacename }}">
+<meta name="geo.position" content="{{ site.Params.latitude }};{{ site.Params.longitude }}">
+<meta name="ICBM" content="{{ site.Params.latitude }}, {{ site.Params.longitude }}">
+
+{{/* Open Graph */}}
+<meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+<meta property="og:site_name" content="{{ site.Params.brand }}">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:image" content="{{ $ogImage }}">
+
+{{/* Twitter */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+{{ with site.Params.twitterHandle }}<meta name="twitter:site" content="{{ . }}">{{ end }}
+
+{{/* Favicons */}}
+<link rel="icon" href="{{ "/favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="alternate icon" href="{{ "/favicon.ico" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relURL }}">
+
+{{/* Sitemap + RSS */}}
+<link rel="sitemap" type="application/xml" href="{{ "/sitemap.xml" | relURL }}">
+{{ with .OutputFormats.Get "rss" -}}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+
+{{/* Fonts: Google Fonts with preconnect for fast first paint */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap">
+
+{{/* Compiled, fingerprinted CSS (Hugo Pipes) */}}
+{{- $css := resources.Get "scss/main.scss" | css.Sass (dict "outputStyle" "compressed" "targetPath" "css/main.css") | resources.Fingerprint "sha256" -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">

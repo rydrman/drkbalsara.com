@@ -1,0 +1,7 @@
+{{- $focus := .Get "focus" | default "comfort" -}}
+<h2 id="why-in-home">Why families choose an in-home visit</h2>
+{{- if eq $focus "car-ride" }}
+<p>Many older pets find car rides painful or stressful — and a longer drive can add one more hard moment on an already difficult day. An in-home visit removes that final journey and lets your dog or cat rest somewhere familiar, surrounded by the people who love them most.</p>
+{{- else }}
+<p>A clinic visit is hard on a pet who is already uncomfortable, and the trip itself can be stressful. An in-home visit means your dog or cat can rest in their favourite spot, with the people who love them most.</p>
+{{- end }}

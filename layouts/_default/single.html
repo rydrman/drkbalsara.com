@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <article class="prose container">
+    <header class="prose__header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.lede }}<p class="prose__lede">{{ . }}</p>{{ end }}
+    </header>
+    <div class="prose__body">
+      {{ .Content }}
+    </div>
+    {{ partial "contact-cta.html" . }}
+  </article>
+{{ end }}

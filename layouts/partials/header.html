@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="{{ "/" | relURL }}" aria-label="{{ site.Params.brand }} home">
+      <span class="site-header__brand-mark" aria-hidden="true">DB</span>
+      <span class="site-header__brand-name">{{ site.Params.brand }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list" role="list">
+        <li><a href="{{ "/services/" | relURL }}">Services</a></li>
+        <li><a href="{{ "/service-areas/" | relURL }}">Service Areas</a></li>
+        <li><a href="{{ "/about/" | relURL }}">About</a></li>
+        <li><a href="{{ "/faq/" | relURL }}">FAQ</a></li>
+        <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="site-header__cta" href="tel:{{ site.Params.phone }}" aria-label="Call {{ site.Params.phoneDisplay }}">
+      <span aria-hidden="true">&#9742;</span>
+      <span>{{ site.Params.phoneDisplay }}</span>
+    </a>
+  </div>
+</header>

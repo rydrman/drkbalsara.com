@@ -1,0 +1,57 @@
+// Design tokens — warm, calm, dignified.
+// Update palette here once final brand colors arrive.
+
+:root {
+  // Colors
+  --c-bg:        #faf7f2;          // soft warm cream
+  --c-surface:   #ffffff;
+  --c-surface-2: #f1ece3;          // muted oat for cards / footer
+  --c-ink:       #2b2a26;          // near-black, warm
+  --c-ink-soft:  #5a5650;          // body text
+  --c-muted:     #8a857c;          // captions / meta
+  --c-line:      #e6dfd1;
+  --c-accent:    #5b6b54;          // sage / forest
+  --c-accent-2:  #3f4d3a;          // darker sage for hover
+  --c-warm:      #b4845a;          // gentle clay / warm accent
+  --c-focus:     #7a8c70;
+
+  // Typography
+  --f-serif: "Cormorant Garamond", "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --f-sans:  "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+
+  // Type scale (modular, mobile-first)
+  --fs-base: 1.0625rem;   // 17px
+  --fs-sm:   0.9375rem;   // 15px
+  --fs-xs:   0.8125rem;   // 13px
+  --fs-lg:   1.1875rem;   // 19px
+  --fs-xl:   1.5rem;
+  --fs-2xl:  2rem;
+  --fs-3xl:  2.75rem;
+  --fs-4xl:  3.5rem;
+
+  --lh-tight: 1.15;
+  --lh-snug:  1.35;
+  --lh-body:  1.65;
+
+  // Spacing
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --s-9: 6rem;
+
+  // Layout
+  --container: 68rem;
+  --container-narrow: 44rem;
+  --radius: 6px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 2px rgba(43, 42, 38, 0.05), 0 6px 18px rgba(43, 42, 38, 0.06);
+
+  // Motion
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --dur:  180ms;
+}

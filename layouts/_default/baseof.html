@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en-CA" }}">
+<head>
+{{- partial "head.html" . -}}
+</head>
+<body class="page page--{{ .Kind }}{{ with .Section }} page--section-{{ . }}{{ end }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{- partial "header.html" . -}}
+  <main id="main" class="main">
+    {{- block "main" . }}{{- end }}
+  </main>
+  {{- partial "footer.html" . -}}
+  {{- partial "schema.html" . -}}
+</body>
+</html>

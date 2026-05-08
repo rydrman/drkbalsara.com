@@ -1,0 +1,98 @@
+{{- $business := dict
+  "@context" "https://schema.org"
+  "@type" "VeterinaryCare"
+  "@id" (printf "%s#business" site.BaseURL)
+  "name" site.Params.brand
+  "alternateName" "Dr. Balsara At-Home Pet Euthanasia"
+  "description" site.Params.description
+  "url" site.BaseURL
+  "telephone" site.Params.phone
+  "email" site.Params.email
+  "priceRange" site.Params.priceRange
+  "image" (absURL (site.Params.ogImage | default "/og-image.jpg"))
+  "logo" (absURL "/favicon.svg")
+  "areaServed" (slice)
+  "address" (dict
+    "@type" "PostalAddress"
+    "addressLocality" "Vancouver"
+    "addressRegion" "BC"
+    "addressCountry" "CA"
+  )
+  "geo" (dict
+    "@type" "GeoCoordinates"
+    "latitude" site.Params.latitude
+    "longitude" site.Params.longitude
+  )
+  "openingHoursSpecification" (slice (dict
+    "@type" "OpeningHoursSpecification"
+    "dayOfWeek" (slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday")
+    "opens" "08:00"
+    "closes" "20:00"
+  ))
+  "knowsAbout" (slice "in-home pet euthanasia" "end-of-life care for pets" "pet hospice" "quality-of-life assessment" "aftercare and cremation referrals")
+-}}
+
+{{- /* Build areaServed list from site params */ -}}
+{{- $areas := slice -}}
+{{- range site.Params.serviceAreas -}}
+  {{- $areas = $areas | append (dict "@type" "City" "name" . "addressRegion" "BC" "addressCountry" "CA") -}}
+{{- end -}}
+{{- $business = merge $business (dict "areaServed" $areas) -}}
+
+<script type="application/ld+json">
+{{ $business | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{- /* Per-page WebPage with breadcrumbs (skip on the home page) */ -}}
+{{- if not .IsHome -}}
+  {{- $crumbs := slice (dict
+    "@type" "ListItem"
+    "position" 1
+    "name" "Home"
+    "item" site.BaseURL) -}}
+  {{- $pos := 2 -}}
+  {{- with .CurrentSection -}}
+    {{- if and (ne .RelPermalink $.RelPermalink) (not .IsHome) -}}
+      {{- $crumbs = $crumbs | append (dict
+        "@type" "ListItem"
+        "position" $pos
+        "name" .Title
+        "item" .Permalink) -}}
+      {{- $pos = add $pos 1 -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $crumbs = $crumbs | append (dict
+    "@type" "ListItem"
+    "position" $pos
+    "name" .Title
+    "item" .Permalink) -}}
+
+  {{- $breadcrumb := dict
+    "@context" "https://schema.org"
+    "@type" "BreadcrumbList"
+    "itemListElement" $crumbs -}}
+<script type="application/ld+json">
+{{ $breadcrumb | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end -}}
+
+{{- /* FAQPage schema, if the page declares a `faq` list in front matter */ -}}
+{{- with .Params.faq -}}
+  {{- $items := slice -}}
+  {{- range . -}}
+    {{- $items = $items | append (dict
+      "@type" "Question"
+      "name" .q
+      "acceptedAnswer" (dict
+        "@type" "Answer"
+        "text" .a
+      )) -}}
+  {{- end -}}
+  {{- $faqLD := dict
+    "@context" "https://schema.org"
+    "@type" "FAQPage"
+    "mainEntity" $items -}}
+<script type="application/ld+json">
+{{ $faqLD | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end -}}

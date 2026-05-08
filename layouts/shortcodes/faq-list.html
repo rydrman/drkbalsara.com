@@ -1,0 +1,10 @@
+{{- with .Page.Params.faq -}}
+<div class="faq">
+  {{- range . }}
+  <details class="faq__item">
+    <summary class="faq__q">{{ .q }}</summary>
+    <div class="faq__a"><p>{{ .a }}</p></div>
+  </details>
+  {{- end }}
+</div>
+{{- end -}}

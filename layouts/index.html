@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">{{ site.Params.tagline }}</p>
+      <h1 class="hero__title">{{ with .Params.heroTitle }}{{ . }}{{ else }}A peaceful goodbye, at home.{{ end }}</h1>
+      {{ with .Params.heroLede }}<p class="hero__lede">{{ . }}</p>{{ end }}
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="tel:{{ site.Params.phone }}">Call {{ site.Params.phoneDisplay }}</a>
+        <a class="btn btn--ghost" href="mailto:{{ site.Params.email }}">Email Dr. Balsara</a>
+      </div>
+      <p class="hero__hours">{{ site.Params.hours }}</p>
+    </div>
+  </section>
+
+  <section class="container prose prose--home">
+    {{ .Content }}
+  </section>
+
+  {{ with where site.RegularPages "Section" "service-areas" }}
+    <section class="container areas">
+      <header class="areas__header">
+        <h2>Serving Vancouver and the Lower Mainland</h2>
+        <p>In-home pet euthanasia and end-of-life care across these communities:</p>
+      </header>
+      <ul class="areas__grid" role="list">
+        {{ range . }}
+          <li class="areas__item">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  {{ partial "contact-cta.html" . }}
+{{ end }}
