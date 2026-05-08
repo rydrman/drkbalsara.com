@@ -1,5 +1,6 @@
 ---
 title: "At-Home Pet Euthanasia in West Vancouver"
+linkTitle: West Vancouver
 metaTitle: "At-Home Pet Euthanasia in West Vancouver, BC | Dr. Balsara"
 description: "In-home pet euthanasia for families in West Vancouver — Ambleside, Dundarave, the British Properties, Caulfeild, and Horseshoe Bay. Compassionate visits in the comfort of your home."
 keywords:

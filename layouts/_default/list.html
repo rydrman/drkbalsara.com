@@ -12,7 +12,7 @@
         {{ range . }}
           <li class="card">
             <a class="card__link" href="{{ .RelPermalink }}">
-              <h2 class="card__title">{{ .Title }}</h2>
+              <h2 class="card__title">{{ .LinkTitle }}</h2>
               {{ with .Params.description }}<p class="card__desc">{{ . }}</p>{{ end }}
               <span class="card__more" aria-hidden="true">Learn more &rarr;</span>
             </a>

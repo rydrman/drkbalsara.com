@@ -19,13 +19,13 @@
   {{ with where site.RegularPages "Section" "service-areas" }}
     <section class="container areas">
       <header class="areas__header">
-        <h2>Serving Vancouver and the Lower Mainland</h2>
+        <h2>Communities we serve</h2>
         <p>In-home pet euthanasia and end-of-life care across these communities:</p>
       </header>
       <ul class="areas__grid" role="list">
         {{ range . }}
           <li class="areas__item">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
           </li>
         {{ end }}
       </ul>

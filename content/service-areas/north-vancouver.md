@@ -1,5 +1,6 @@
 ---
 title: "At-Home Pet Euthanasia in North Vancouver"
+linkTitle: North Vancouver
 metaTitle: "At-Home Pet Euthanasia in North Vancouver, BC | Dr. Balsara"
 description: "In-home pet euthanasia for families on the North Shore — North Vancouver, Lynn Valley, Lonsdale, Deep Cove, and Edgemont. Calm, unhurried visits in the comfort of your home."
 keywords:

@@ -1,5 +1,6 @@
 ---
 title: "At-Home Pet Euthanasia in Richmond"
+linkTitle: Richmond
 metaTitle: "At-Home Pet Euthanasia in Richmond, BC | Dr. Balsara"
 description: "In-home pet euthanasia for families in Richmond, Steveston, Terra Nova, and surrounding neighbourhoods. Compassionate visits in the comfort of your home."
 keywords:

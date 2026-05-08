@@ -1,5 +1,6 @@
 ---
 title: "At-Home Pet Euthanasia in Vancouver"
+linkTitle: Vancouver
 metaTitle: "At-Home Pet Euthanasia in Vancouver, BC | Dr. Balsara"
 description: "Gentle, in-home pet euthanasia for families in the City of Vancouver — Kitsilano, Mount Pleasant, Kerrisdale, the West End, East Van, and beyond. Unhurried visits in the comfort of your home."
 keywords:

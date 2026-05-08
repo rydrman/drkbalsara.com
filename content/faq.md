@@ -15,7 +15,7 @@ faq:
   - q: "What happens during an in-home euthanasia visit?"
     a: "Dr. Balsara will sit with you and your pet, briefly review their history, and answer any questions. A gentle sedative is given first so your pet drifts into a deep, comfortable sleep. The final injection is given peacefully while you hold them. Afterwards, there is time — there is no rush."
   - q: "How long does the visit take?"
-    a: "Plan for about 45 to 60 minutes, but the visit is paced to your family. There is no clock."
+    a: "Plan for about 60 minutes, but the visit is paced to your family. There is no clock."
   - q: "How do I know if it's time?"
     a: "Dr. Balsara is happy to do a separate quality-of-life consultation. Many families find it helpful to use the HHHHHMM scale (Hurt, Hunger, Hydration, Hygiene, Happiness, Mobility, More good days than bad) as a starting point for the conversation."
   - q: "What areas do you serve?"

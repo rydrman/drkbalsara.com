@@ -1,5 +1,6 @@
 ---
 title: "At-Home Pet Euthanasia in New Westminster"
+linkTitle: New Westminster
 metaTitle: "At-Home Pet Euthanasia in New Westminster, BC | Dr. Balsara"
 description: "In-home pet euthanasia for families in New Westminster — Queen's Park, Sapperton, Quayside, and Uptown. Compassionate visits in the comfort of your home."
 keywords:

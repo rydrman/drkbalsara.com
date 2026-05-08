@@ -1,5 +1,6 @@
 ---
 title: "At-Home Pet Euthanasia in Coquitlam"
+linkTitle: Coquitlam
 metaTitle: "At-Home Pet Euthanasia in Coquitlam, BC | Dr. Balsara"
 description: "In-home pet euthanasia for families in Coquitlam, Port Coquitlam, and Port Moody. Calm, unhurried visits in the comfort of your home."
 keywords:

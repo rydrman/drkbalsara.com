@@ -237,6 +237,10 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
 .prose {
   padding-block: var(--s-7);
 }
+/* Home: prose sits directly above `.areas`; avoid doubling vertical padding. */
+.prose--home {
+  padding-bottom: var(--s-5);
+}
 .prose__header { max-width: var(--container-narrow); margin-bottom: var(--s-6); }
 .prose__lede {
   font-family: var(--f-serif);
@@ -265,6 +269,9 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
   gap: var(--s-5);
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
+.card-grid > li {
+  margin: 0;
+}
 .card {
   background: var(--c-surface);
   border: 1px solid var(--c-line);
@@ -283,7 +290,10 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
 .card__more { color: var(--c-accent-2); font-size: var(--fs-sm); }
 
 /* Service areas grid (home) -------------------------------------------- */
-.areas { padding-block: var(--s-7); }
+.areas {
+  padding-top: var(--s-5);
+  padding-bottom: var(--s-7);
+}
 .areas__header { max-width: var(--container-narrow); margin-bottom: var(--s-5); }
 .areas__grid {
   list-style: none;
@@ -292,9 +302,20 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
   display: grid;
   gap: var(--s-3);
   grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  align-items: stretch;
+}
+/* Override global `li + li { margin-top }` — grid uses `gap`, not vertical list rhythm. */
+.areas__item {
+  display: flex;
+  min-width: 0;
+  margin: 0;
 }
 .areas__item a {
-  display: block;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: var(--s-3) var(--s-4);
   background: var(--c-surface);
   border: 1px solid var(--c-line);

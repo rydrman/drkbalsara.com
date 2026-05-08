@@ -1,5 +1,6 @@
 ---
 title: "At-Home Pet Euthanasia in Burnaby"
+linkTitle: Burnaby
 metaTitle: "At-Home Pet Euthanasia in Burnaby, BC | Dr. Balsara"
 description: "In-home pet euthanasia for families in Burnaby — Brentwood, Metrotown, Lougheed, Burnaby Heights, and surrounding neighbourhoods. Calm, unhurried visits in your home."
 keywords:
