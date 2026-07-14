@@ -171,6 +171,7 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
   overflow: hidden;
   background: var(--c-bg);
   border-bottom: 1px solid var(--c-line);
+  min-height: calc(100svh - 4.75rem);
 }
 .hero__landscape {
   position: absolute;
@@ -190,7 +191,7 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
   position: relative;
   z-index: 1;
   padding-block: clamp(var(--s-7), 8vw, var(--s-9));
-  padding-bottom: clamp(var(--s-9), 14vw, calc(var(--s-9) + 2rem));
+  padding-bottom: clamp(var(--s-8), 10vw, var(--s-9));
   max-width: 56rem;
   text-align: left;
 }
@@ -227,7 +228,9 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
 .hero__scroll {
   position: absolute;
   left: 50%;
-  bottom: var(--s-4);
+  /* Keep the cue in the first viewport even if the hero grows taller. */
+  top: calc(100svh - 4.75rem - 3.25rem);
+  bottom: auto;
   z-index: 1;
   transform: translateX(-50%);
   display: grid;
@@ -309,6 +312,49 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
   font-family: var(--f-serif);
   font-size: var(--fs-lg);
   color: var(--c-ink);
+}
+
+/* About page — portrait under title on mobile, beside content on desktop */
+.about__grid--with-portrait {
+  display: grid;
+  gap: var(--s-5);
+  align-items: start;
+}
+.about__grid--with-portrait .about__header {
+  margin-bottom: 0;
+  max-width: none;
+}
+.about__portrait {
+  margin: 0;
+  max-width: 18rem;
+}
+.about__portrait img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  background: var(--c-surface-2);
+}
+.about__grid--with-portrait .about__body {
+  max-width: none;
+}
+@media (min-width: 720px) {
+  .about__grid--with-portrait {
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem);
+    grid-template-areas:
+      "header portrait"
+      "body portrait";
+    column-gap: var(--s-7);
+    row-gap: var(--s-5);
+  }
+  .about__grid--with-portrait .about__header { grid-area: header; }
+  .about__grid--with-portrait .about__portrait {
+    grid-area: portrait;
+    max-width: none;
+    position: sticky;
+    top: 5.5rem;
+  }
+  .about__grid--with-portrait .about__body { grid-area: body; }
 }
 
 /* Cards / grid ---------------------------------------------------------- */
