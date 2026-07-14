@@ -1,0 +1,31 @@
+{{ define "main" }}
+  {{- $portrait := .Resources.GetMatch "portrait*" -}}
+  {{- $alt := .Params.portraitAlt | default (printf "Portrait of %s" site.Params.author) -}}
+  <article class="prose about container">
+    <div class="about__grid{{ if $portrait }} about__grid--with-portrait{{ end }}">
+      <header class="prose__header about__header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.lede }}<p class="prose__lede">{{ . }}</p>{{ end }}
+      </header>
+      {{ with $portrait }}
+        {{- $img := .Fill "640x852 Center webp q82" -}}
+        {{- $img2x := .Fill "960x1278 Center webp q82" -}}
+        <figure class="about__portrait">
+          <img
+            src="{{ $img.RelPermalink }}"
+            srcset="{{ $img.RelPermalink }} 1x, {{ $img2x.RelPermalink }} 2x"
+            width="{{ $img.Width }}"
+            height="{{ $img.Height }}"
+            alt="{{ $alt }}"
+            loading="eager"
+            decoding="async"
+          >
+        </figure>
+      {{ end }}
+      <div class="prose__body about__body">
+        {{ .Content }}
+      </div>
+    </div>
+    {{ partial "contact-cta.html" . }}
+  </article>
+{{ end }}

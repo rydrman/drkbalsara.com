@@ -7,8 +7,11 @@ keywords:
   - in-home veterinarian Vancouver
   - end of life veterinarian BC
 lede: "Dedicated to gentle, in-home end-of-life care for the pets of Vancouver and the Lower Mainland."
+portraitAlt: "Dr. Balsara"
 date: 2026-05-07
-lastmod: 2026-05-07
+lastmod: 2026-07-13
+build:
+  publishResources: false
 ---
 
 

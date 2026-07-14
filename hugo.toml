@@ -1,12 +1,10 @@
 baseURL = "https://drkbalsara.com/"
-languageCode = "en-CA"
+locale = "en-CA"
 defaultContentLanguage = "en-ca"
 title = "Dr. Balsara — Compassionate At-Home Pet Euthanasia in Vancouver"
 enableRobotsTXT = true
 # enableGitInfo = true   # turn on after the first commit; needs Git history to work.
 enableEmoji = false
-canonifyURLs = true
-
 # Sitemap + RSS via Hugo defaults; we don't ship a custom JSON index.
 [outputs]
   home = ["HTML", "RSS"]
