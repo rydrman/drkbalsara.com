@@ -29,7 +29,7 @@
 {{/* Open Graph — service pages are website/profile, not articles */}}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.Params.brand }}">
-<meta property="og:locale" content="en_CA">
+<meta property="og:locale" content="{{ replace (site.Params.locale | default "en-CA") "-" "_" }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ $canonical }}">

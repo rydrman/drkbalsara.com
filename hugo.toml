@@ -21,7 +21,6 @@ disableKinds = ["taxonomy", "term"]
 [languages]
   [languages.en]
     label = "English"
-    locale = "en-CA"
     weight = 1
 
 [minify]
@@ -53,6 +52,7 @@ disableKinds = ["taxonomy", "term"]
   hint = "photo"
 
 [params]
+  locale = "en-CA"
   description = "Dr. Balsara provides gentle, in-home pet euthanasia and end-of-life care across Vancouver and the Lower Mainland. Compassionate, unhurried goodbyes in the comfort of home."
   author = "Dr. Balsara"
   # Brand
