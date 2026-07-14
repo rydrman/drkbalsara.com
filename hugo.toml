@@ -53,7 +53,7 @@ disableKinds = ["taxonomy", "term"]
   # Brand
   brand = "Dr. Balsara"
   tagline = "Compassionate at-home pet euthanasia in Vancouver and the Lower Mainland"
-  # Contact (placeholders — update before launch)
+  # Contact
   phone = "+14165650477"
   phoneDisplay = "+1 416-565-0477"
   email = "drkbalsara@gmail.com"
@@ -64,8 +64,6 @@ disableKinds = ["taxonomy", "term"]
   latitude = "49.2827"
   longitude = "-123.1207"
   priceRange = "$$"
-  # Social / OG
-  ogImage = "/og-image.jpg"
   themeColor = "#5b6b54"
   twitterHandle = ""
   # Service areas (used for areaServed JSON-LD and footer/section listing)

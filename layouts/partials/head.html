@@ -2,7 +2,8 @@
 {{- with .Params.metaTitle }}{{ $title = . }}{{ end -}}
 {{- $desc := cond (ne (.Params.description | default "") "") .Params.description site.Params.description -}}
 {{- $canonical := .Permalink -}}
-{{- $ogImage := absURL (site.Params.ogImage | default "/og-image.jpg") -}}
+{{- $ogImage := "" -}}
+{{- with site.Params.ogImage }}{{ $ogImage = absURL . }}{{ end -}}
 {{- with .Params.ogImage }}{{ $ogImage = absURL . }}{{ end -}}
 
 <meta charset="utf-8">
@@ -30,13 +31,17 @@
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ $canonical }}">
-<meta property="og:image" content="{{ $ogImage }}">
+{{- with $ogImage }}
+<meta property="og:image" content="{{ . }}">
+{{- end }}
 
 {{/* Twitter */}}
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="{{ cond (ne $ogImage "") "summary_large_image" "summary" }}">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $desc }}">
-<meta name="twitter:image" content="{{ $ogImage }}">
+{{- with $ogImage }}
+<meta name="twitter:image" content="{{ . }}">
+{{- end }}
 {{ with site.Params.twitterHandle }}<meta name="twitter:site" content="{{ . }}">{{ end }}
 
 {{/* Favicons */}}

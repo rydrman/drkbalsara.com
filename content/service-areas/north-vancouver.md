@@ -13,7 +13,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — confirm North Van neighbourhoods. -->
 
 Dr. Balsara serves families in North Vancouver — including Lonsdale, Lynn Valley, Deep Cove, Edgemont Village, Capilano, and Seymour — with in-home pet euthanasia and end-of-life care.
 

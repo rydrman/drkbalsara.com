@@ -13,7 +13,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — confirm New West neighbourhoods. -->
 
 Dr. Balsara serves families in New Westminster — including Queen's Park, Sapperton, Quayside, Uptown, and Queensborough — with in-home pet euthanasia and end-of-life care.
 

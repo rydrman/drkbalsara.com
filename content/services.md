@@ -12,7 +12,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — confirm exact service descriptions and pricing language with Dr. Balsara. -->
 
 ## In-Home Euthanasia
 

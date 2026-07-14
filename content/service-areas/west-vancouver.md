@@ -13,7 +13,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — confirm West Van neighbourhoods. -->
 
 Dr. Balsara serves families in West Vancouver — including Ambleside, Dundarave, the British Properties, Caulfeild, and Horseshoe Bay — with in-home pet euthanasia and end-of-life care.
 

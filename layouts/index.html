@@ -1,5 +1,8 @@
 {{ define "main" }}
   <section class="hero">
+    <div class="hero__landscape" aria-hidden="true">
+      {{ partial "hero-landscape.html" . }}
+    </div>
     <div class="container hero__inner">
       <p class="hero__eyebrow">{{ site.Params.tagline }}</p>
       <h1 class="hero__title">{{ with .Params.heroTitle }}{{ . }}{{ else }}A peaceful goodbye, at home.{{ end }}</h1>

@@ -11,7 +11,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — confirm preferred contact wording. -->
 
 ## Phone
 

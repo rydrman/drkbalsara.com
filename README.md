@@ -42,7 +42,7 @@ Output lands in `public/`.
 |   |-- _default/       # baseof.html, single.html, list.html
 |   |-- partials/       # head, header, footer, schema (JSON-LD), contact-cta
 |   `-- shortcodes/     # faq-list
-|-- static/             # CNAME, robots.txt, favicon, /og-image.jpg (TODO)
+|-- static/             # CNAME, favicon.svg / .ico, apple-touch-icon.png
 |-- .github/workflows/  # Hugo build + Pages deploy
 `-- hugo.toml
 ```
@@ -57,11 +57,11 @@ All page copy lives in `content/*.md`. Each file has a YAML front-matter block w
 - `lede` — optional short subtitle shown below the H1
 - `faq` — only on `content/faq.md`; populates both the visible accordion and the `FAQPage` JSON-LD
 
-Search the codebase for `TODO: copy` to find every block the writer should rewrite.
-
 ## Site configuration
 
 Site-wide values (phone, email, hours, geo, service-area list, brand color) live under `[params]` in [hugo.toml](hugo.toml). Update them once and they propagate through every page, schema block, and meta tag.
+
+Optional: set `params.ogImage` (e.g. `/og-image.jpg`) and add that file under `static/` to get large link-preview images on social platforms.
 
 ## SEO
 
@@ -92,15 +92,6 @@ A push to `main` triggers `.github/workflows/hugo.yml`, which:
 ### Runtime behavior
 
 Deployments are triggered by pushes to `main`. If a deployment fails, inspect the latest workflow run in GitHub Actions, fix the issue locally, and push again.
-
-## Outstanding TODOs before launch
-
-- [ ] Replace placeholder phone, email, and hours in `hugo.toml` (`[params]`).
-- [ ] Add real Open Graph image at `static/og-image.jpg` (1200x630, JPG or PNG).
-- [ ] Add `static/apple-touch-icon.png` (180x180) and `static/favicon.ico` if a richer favicon set is desired.
-- [ ] Replace every `TODO: copy` block in `content/` once the writer's copy arrives.
-- [ ] Confirm credentials and registration number on `content/about.md`.
-- [ ] Have a lawyer review `content/privacy.md` before launch.
 
 ## License
 

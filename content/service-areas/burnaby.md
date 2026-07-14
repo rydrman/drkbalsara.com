@@ -13,7 +13,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — confirm Burnaby neighbourhoods. -->
 
 Dr. Balsara serves families across Burnaby — including Brentwood, Metrotown, Lougheed, Burnaby Heights, Edmonds, and Capitol Hill — with in-home pet euthanasia and end-of-life care.
 

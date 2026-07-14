@@ -15,7 +15,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — replace this with the writer's homepage prose. Keep an H2 outline so the page stays scannable. -->
 
 ## When the time comes, you don't have to drive anywhere
 

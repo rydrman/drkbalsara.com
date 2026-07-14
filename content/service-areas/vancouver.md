@@ -14,7 +14,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — confirm neighbourhoods to highlight. -->
 
 Dr. Balsara visits families across the City of Vancouver — including Kitsilano, Mount Pleasant, Fairview, Kerrisdale, Dunbar, the West End, Strathcona, East Vancouver, Marpole, and Killarney — for in-home pet euthanasia and end-of-life care.
 

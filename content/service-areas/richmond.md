@@ -13,7 +13,6 @@ date: 2026-05-07
 lastmod: 2026-05-07
 ---
 
-<!-- TODO: copy — confirm Richmond neighbourhoods. -->
 
 Dr. Balsara visits families across Richmond — including Steveston, Terra Nova, Brighouse, Hamilton, and Thompson — for in-home pet euthanasia and end-of-life care.
 
