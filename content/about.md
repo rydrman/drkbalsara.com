@@ -15,13 +15,13 @@ lastmod: 2026-05-07
 
 ## Background
 
-Dr. Balsara is a licensed veterinarian practising in British Columbia. Dr. Balsara brings decades of experience and focuses exclusively on in-home end-of-life care, where there is space and time for the gentle, unhurried goodbye every family deserves.
+Dr. Balsara is a fully licensed veterinarian practising now in British Columbia. She brings decades of experience from over 35 years of running a full service mobile veterinary clinic in Ontario. With the onset of the covid pandemic in 2020, she transitioned to focus exclusively on in-home end-of-life care in Toronto. After moving to Vancouver, she has recently set up a similar practice here in the lower mainland to bring her years of expertise in caring for pets and their families where the importance of a compassionate, caring and unhurried gentle goodbye is paramount and what every family deserves.
 
 ## Approach
 
-Every visit is paced to your family — there is no clock, no waiting room, and no rush. Dr. Balsara will explain each step, answer your questions, and give your pet the time they need.
+Every visit is paced to your family — there is no clock, no waiting room, and no rush. Dr. Balsara will take a full history of your pet prior to explaining each step, answer your questions as they arise, and give you and your pet the time you need for a peaceful and respectful goodbye.
 
 ## Credentials
 
-- Doctor of Veterinary Medicine (DVM) <!-- TODO: confirm year/school -->
-- Licensed by the [College of Veterinarians of British Columbia](https://www.cvbc.ca/) <!-- TODO: confirm registration number -->
+- Doctor of Veterinary Medicine (DVM)
+- Licensed by the [College of Veterinarians of British Columbia](https://www.cvbc.ca/)
