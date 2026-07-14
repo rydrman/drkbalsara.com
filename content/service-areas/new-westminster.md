@@ -10,7 +10,9 @@ keywords:
   - cat euthanasia at home New Westminster
 lede: "Peaceful in-home euthanasia visits across New Westminster."
 date: 2026-05-07
-lastmod: 2026-05-07
+lastmod: 2026-07-13
+sitemap:
+  priority: 0.7
 ---
 
 

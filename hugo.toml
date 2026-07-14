@@ -1,20 +1,28 @@
 baseURL = "https://drkbalsara.com/"
-locale = "en-CA"
-defaultContentLanguage = "en-ca"
+defaultContentLanguage = "en"
 title = "Dr. Balsara — Compassionate At-Home Pet Euthanasia in Vancouver"
 enableRobotsTXT = true
 # enableGitInfo = true   # turn on after the first commit; needs Git history to work.
 enableEmoji = false
+# Disable unused taxonomies (no blog yet — keeps sitemap clean).
+disableKinds = ["taxonomy", "term"]
+
 # Sitemap + RSS via Hugo defaults; we don't ship a custom JSON index.
 [outputs]
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
+  page = ["HTML"]
 
 [sitemap]
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
+
+[languages]
+  [languages.en]
+    label = "English"
+    locale = "en-CA"
+    weight = 1
 
 [minify]
   disableHTML = false
@@ -29,8 +37,7 @@ enableEmoji = false
     keepEndTags = true
     keepQuotes = true
 
-# Disable unused taxonomies (no blog yet — keeps sitemap clean).
-disableKinds = ["taxonomy", "term"]
+[taxonomies]
 
 [markup]
   [markup.goldmark.renderer]
@@ -64,6 +71,9 @@ disableKinds = ["taxonomy", "term"]
   priceRange = "$$"
   themeColor = "#5b6b54"
   twitterHandle = ""
+  # Social / link-preview image (1200×630 recommended); also used for LocalBusiness schema
+  ogImage = "/og-image.jpg"
+  ogImageAlt = "Dr. Balsara — compassionate at-home pet euthanasia in Vancouver and the Lower Mainland"
   # Service areas (used for areaServed JSON-LD and footer/section listing)
   serviceAreas = [
     "Vancouver",

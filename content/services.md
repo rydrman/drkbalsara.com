@@ -9,7 +9,9 @@ keywords:
   - pet aftercare Vancouver
 lede: "Gentle in-home end-of-life care for dogs and cats."
 date: 2026-05-07
-lastmod: 2026-05-07
+lastmod: 2026-07-13
+sitemap:
+  priority: 0.9
 ---
 
 
@@ -28,7 +30,7 @@ Includes:
 
 ## Quality-of-Life Consultation
 
-Not sure if it's time? A separate, quieter visit to talk through how your pet is doing. I use practical, evidence-based scales (such as the HHHHHMM scale) so you can make a confident, informed decision - without pressure.
+Not sure if it's time? A separate, quieter visit to talk through how your pet is doing. I use practical, evidence-based scales (such as the HHHHHMM scale) so you can make a confident, informed decision - without pressure. More on this process is in the [FAQ](/faq/).
 
 ## Aftercare Coordination
 
@@ -36,4 +38,4 @@ Dr. Balsara works with established Lower Mainland providers for private and comm
 
 ## Pricing
 
-Visit fees vary by location and time. Please call **{{< param "phoneDisplay" >}}** or email **{{< param "email" >}}** for a current quote - I'll outline the procedure and costs involved prior to our visit.
+Visit fees vary by location and time. Please [call or email](/contact/) for a current quote - I'll outline the procedure and costs involved prior to our visit. Serving families across [Vancouver and the Lower Mainland](/service-areas/).

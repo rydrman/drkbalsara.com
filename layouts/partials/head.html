@@ -3,8 +3,10 @@
 {{- $desc := cond (ne (.Params.description | default "") "") .Params.description site.Params.description -}}
 {{- $canonical := .Permalink -}}
 {{- $ogImage := "" -}}
+{{- $ogImageAlt := site.Params.ogImageAlt | default site.Params.brand -}}
 {{- with site.Params.ogImage }}{{ $ogImage = absURL . }}{{ end -}}
 {{- with .Params.ogImage }}{{ $ogImage = absURL . }}{{ end -}}
+{{- with .Params.ogImageAlt }}{{ $ogImageAlt = . }}{{ end -}}
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -16,7 +18,7 @@
 {{- end }}
 <link rel="canonical" href="{{ $canonical }}">
 <meta name="author" content="{{ site.Params.author }}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
 {{/* Geo signals (legacy but harmless and still parsed by some engines) */}}
 <meta name="geo.region" content="{{ site.Params.geoRegion }}">
@@ -24,8 +26,8 @@
 <meta name="geo.position" content="{{ site.Params.latitude }};{{ site.Params.longitude }}">
 <meta name="ICBM" content="{{ site.Params.latitude }}, {{ site.Params.longitude }}">
 
-{{/* Open Graph */}}
-<meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+{{/* Open Graph — service pages are website/profile, not articles */}}
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.Params.brand }}">
 <meta property="og:locale" content="en_CA">
 <meta property="og:title" content="{{ $title }}">
@@ -33,6 +35,9 @@
 <meta property="og:url" content="{{ $canonical }}">
 {{- with $ogImage }}
 <meta property="og:image" content="{{ . }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ $ogImageAlt }}">
 {{- end }}
 
 {{/* Twitter */}}
@@ -41,6 +46,7 @@
 <meta name="twitter:description" content="{{ $desc }}">
 {{- with $ogImage }}
 <meta name="twitter:image" content="{{ . }}">
+<meta name="twitter:image:alt" content="{{ $ogImageAlt }}">
 {{- end }}
 {{ with site.Params.twitterHandle }}<meta name="twitter:site" content="{{ . }}">{{ end }}
 

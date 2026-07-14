@@ -61,24 +61,28 @@ All page copy lives in `content/*.md`. Each file has a YAML front-matter block w
 
 Site-wide values (phone, email, hours, geo, service-area list, brand color) live under `[params]` in [hugo.toml](hugo.toml). Update them once and they propagate through every page, schema block, and meta tag.
 
-Optional: set `params.ogImage` (e.g. `/og-image.jpg`) and add that file under `static/` to get large link-preview images on social platforms.
+Optional: replace `static/og-image.jpg` (1200×630) if you want a different link-preview image. It is wired via `params.ogImage` in [hugo.toml](hugo.toml).
 
 ## SEO
 
 The theme bakes in:
 
-- Per-page `<title>`, meta description, canonical, Open Graph, Twitter Card
+- Per-page `<title>`, meta description, canonical, Open Graph (with image), Twitter Card
 - JSON-LD `VeterinaryCare` (subtype of `LocalBusiness`) on every page, with `areaServed` enumerating every city listed in `params.serviceAreas`
+- `WebSite` JSON-LD on the home page
 - `BreadcrumbList` JSON-LD on inner pages
 - `FAQPage` JSON-LD on `/faq/` (sourced from `faq` array in front matter)
-- Auto-generated `sitemap.xml`
+- Auto-generated `sitemap.xml` (with higher priorities on home, services, and city pages)
 - Geo meta (`geo.region`, `geo.placename`, `ICBM`)
 - Per-city landing pages under `/service-areas/<city>/` for local long-tail queries
+- Linked service-area list in the footer
 
 After launch, **submit the sitemap** at:
 
 - [Google Search Console](https://search.google.com/search-console) — add property `https://drkbalsara.com/`, then submit `https://drkbalsara.com/sitemap.xml`
-- [Bing Webmaster Tools](https://www.bing.com/webmasters)
+- [Bing Webmaster Tools](https://bing.com/webmasters)
+
+Also consider creating a free [Google Business Profile](https://www.google.com/business/) for local pack visibility (name, phone, service area, and website URL should match this site).
 
 ## Deployment
 

@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <article class="prose container">
+    <header class="prose__header">
+      <h1>Page not found</h1>
+      <p class="prose__lede">That page isn’t here — try one of these instead.</p>
+    </header>
+    <div class="prose__body">
+      <ul>
+        <li><a href="{{ "/" | relURL }}">Home</a></li>
+        <li><a href="{{ "/services/" | relURL }}">Services</a></li>
+        <li><a href="{{ "/service-areas/" | relURL }}">Service areas</a></li>
+        <li><a href="{{ "/faq/" | relURL }}">FAQ</a></li>
+        <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
+      </ul>
+    </div>
+  </article>
+{{ end }}

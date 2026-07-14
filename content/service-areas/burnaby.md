@@ -10,7 +10,9 @@ keywords:
   - dog euthanasia at home Burnaby
 lede: "Gentle in-home euthanasia visits across Burnaby."
 date: 2026-05-07
-lastmod: 2026-05-07
+lastmod: 2026-07-13
+sitemap:
+  priority: 0.7
 ---
 
 

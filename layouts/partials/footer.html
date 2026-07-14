@@ -15,14 +15,26 @@
     <div class="site-footer__col">
       <h2 class="site-footer__heading">Service Areas</h2>
       <ul role="list" class="site-footer__areas">
-        {{ range site.Params.serviceAreas }}<li>{{ . }}</li>{{ end }}
+        {{- range site.Params.serviceAreas -}}
+          {{- $name := . -}}
+          {{- $page := site.GetPage (printf "/service-areas/%s" ($name | urlize)) -}}
+          <li>
+            {{- with $page -}}
+              <a href="{{ .RelPermalink }}">{{ $name }}</a>
+            {{- else -}}
+              {{ $name }}
+            {{- end -}}
+          </li>
+        {{- end -}}
       </ul>
     </div>
     <div class="site-footer__col">
       <h2 class="site-footer__heading">More</h2>
       <ul role="list">
+        <li><a href="{{ "/services/" | relURL }}">Services</a></li>
         <li><a href="{{ "/about/" | relURL }}">About Dr. Balsara</a></li>
         <li><a href="{{ "/faq/" | relURL }}">FAQ</a></li>
+        <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
       </ul>
     </div>
   </div>

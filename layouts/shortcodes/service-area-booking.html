@@ -1,3 +1,3 @@
 {{- $place := .Get "place" -}}
 <h2 id="booking">Booking a visit in {{ $place }}</h2>
-<p>Call <strong><a href="tel:{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></strong> or email <strong><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></strong>. {{ site.Params.hours }}.</p>
+<p>Call <strong><a href="tel:{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></strong> or email <strong><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></strong>. {{ site.Params.hours }}. Learn more about <a href="{{ "/services/" | relURL }}">what a visit includes</a>, or see the <a href="{{ "/faq/" | relURL }}">FAQ</a>.</p>

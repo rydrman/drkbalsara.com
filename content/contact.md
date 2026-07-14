@@ -8,7 +8,9 @@ keywords:
   - end of life vet Vancouver phone
 lede: "I'm here when you're ready."
 date: 2026-05-07
-lastmod: 2026-05-07
+lastmod: 2026-07-13
+sitemap:
+  priority: 0.8
 ---
 
 
@@ -30,4 +32,4 @@ For non-urgent questions or to start the conversation in writing:
 
 ## Service area
 
-I serve Vancouver and most of the Lower Mainland. See [service areas](/service-areas/) for the full list, or just call — I'll tell you honestly if I can come to you.
+I serve Vancouver and most of the Lower Mainland. See [service areas](/service-areas/) for the full list, or just call — I'll tell you honestly if I can come to you. You can also review [services](/services/) and the [FAQ](/faq/) before we talk.

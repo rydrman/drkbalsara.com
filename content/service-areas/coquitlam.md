@@ -10,7 +10,9 @@ keywords:
   - dog euthanasia at home Coquitlam
 lede: "Gentle in-home euthanasia visits across the Tri-Cities."
 date: 2026-05-07
-lastmod: 2026-05-07
+lastmod: 2026-07-13
+sitemap:
+  priority: 0.7
 ---
 
 

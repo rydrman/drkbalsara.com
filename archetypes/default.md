@@ -1,5 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+metaTitle: ""
 description: ""
 keywords: []
 date: {{ .Date }}

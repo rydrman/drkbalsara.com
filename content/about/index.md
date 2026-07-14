@@ -7,9 +7,11 @@ keywords:
   - in-home veterinarian Vancouver
   - end of life veterinarian BC
 lede: "Dedicated to gentle, in-home end-of-life care for the pets of Vancouver and the Lower Mainland."
-portraitAlt: "Dr. Balsara"
+portraitAlt: "Dr. Balsara with a dog on the Vancouver waterfront"
 date: 2026-05-07
 lastmod: 2026-07-13
+sitemap:
+  priority: 0.8
 build:
   publishResources: false
 ---
@@ -21,7 +23,7 @@ Dr. Balsara is a fully licensed veterinarian practising now in British Columbia.
 
 ## Approach
 
-Every visit is paced to your family — there is no clock, no waiting room, and no rush. Dr. Balsara will take a full history of your pet prior to explaining each step, answer your questions as they arise, and give you and your pet the time you need for a peaceful and respectful goodbye.
+Every visit is paced to your family — there is no clock, no waiting room, and no rush. Dr. Balsara will take a full history of your pet prior to explaining each step, answer your questions as they arise, and give you and your pet the time you need for a peaceful and respectful goodbye. Read more about [services](/services/) or [common questions](/faq/).
 
 ## Credentials
 

@@ -1,15 +1,16 @@
+{{- $img := absURL (site.Params.ogImage | default "/apple-touch-icon.png") -}}
 {{- $business := dict
   "@context" "https://schema.org"
   "@type" "VeterinaryCare"
   "@id" (printf "%s#business" site.BaseURL)
   "name" site.Params.brand
   "alternateName" "Dr. Balsara At-Home Pet Euthanasia"
-  "description" site.Params.description
+  "description" (printf "%s %s." site.Params.description site.Params.hours)
   "url" site.BaseURL
   "telephone" site.Params.phone
   "email" site.Params.email
   "priceRange" site.Params.priceRange
-  "image" (absURL (site.Params.ogImage | default "/apple-touch-icon.png"))
+  "image" $img
   "logo" (absURL "/favicon.svg")
   "areaServed" (slice)
   "address" (dict
@@ -23,25 +24,51 @@
     "latitude" site.Params.latitude
     "longitude" site.Params.longitude
   )
-  "openingHoursSpecification" (slice (dict
-    "@type" "OpeningHoursSpecification"
-    "dayOfWeek" (slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday")
-    "opens" "08:00"
-    "closes" "20:00"
-  ))
   "knowsAbout" (slice "in-home pet euthanasia" "end-of-life care for pets" "pet hospice" "quality-of-life assessment" "aftercare and cremation referrals")
+  "hasOfferCatalog" (dict
+    "@type" "OfferCatalog"
+    "name" "End-of-life pet care"
+    "itemListElement" (slice
+      (dict "@type" "Offer" "itemOffered" (dict "@type" "Service" "name" "In-home pet euthanasia" "areaServed" "Lower Mainland, British Columbia"))
+      (dict "@type" "Offer" "itemOffered" (dict "@type" "Service" "name" "Quality-of-life consultation" "areaServed" "Lower Mainland, British Columbia"))
+      (dict "@type" "Offer" "itemOffered" (dict "@type" "Service" "name" "Aftercare and cremation coordination" "areaServed" "Lower Mainland, British Columbia"))
+    )
+  )
 -}}
 
-{{- /* Build areaServed list from site params */ -}}
+{{- /* Build areaServed list from site params; link cities that have landing pages */ -}}
 {{- $areas := slice -}}
 {{- range site.Params.serviceAreas -}}
-  {{- $areas = $areas | append (dict "@type" "City" "name" . "addressRegion" "BC" "addressCountry" "CA") -}}
+  {{- $slug := . | urlize -}}
+  {{- $page := site.GetPage (printf "/service-areas/%s" $slug) -}}
+  {{- $city := dict "@type" "City" "name" . "addressRegion" "BC" "addressCountry" "CA" -}}
+  {{- with $page -}}
+    {{- $city = merge $city (dict "url" .Permalink) -}}
+  {{- end -}}
+  {{- $areas = $areas | append $city -}}
 {{- end -}}
 {{- $business = merge $business (dict "areaServed" $areas) -}}
 
 <script type="application/ld+json">
 {{ $business | jsonify (dict "indent" "  ") | safeJS }}
 </script>
+
+{{- /* WebSite schema on the home page helps sitelinks / brand recognition */ -}}
+{{- if .IsHome -}}
+  {{- $website := dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "@id" (printf "%s#website" site.BaseURL)
+    "name" site.Params.brand
+    "url" site.BaseURL
+    "description" site.Params.description
+    "inLanguage" "en-CA"
+    "publisher" (dict "@id" (printf "%s#business" site.BaseURL))
+  -}}
+<script type="application/ld+json">
+{{ $website | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end -}}
 
 {{- /* Per-page WebPage with breadcrumbs (skip on the home page) */ -}}
 {{- if not .IsHome -}}

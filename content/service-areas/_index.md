@@ -8,7 +8,9 @@ keywords:
   - home euthanasia Burnaby Richmond
 lede: "Compassionate, in-home end-of-life care across Vancouver and the Lower Mainland."
 date: 2026-05-07
-lastmod: 2026-05-07
+lastmod: 2026-07-13
+sitemap:
+  priority: 0.8
 ---
 
-Dr. Balsara comes to families in their homes across the Lower Mainland. Pick the community closest to you to learn more, or just call — most of the region can be served.
+Dr. Balsara comes to families in their homes across the Lower Mainland for [in-home pet euthanasia](/services/). Pick the community closest to you to learn more, or [get in touch](/contact/) — most of the region can be served.
