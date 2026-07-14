@@ -166,11 +166,13 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
 
 /* Hero ------------------------------------------------------------------ */
 .hero {
+  position: relative;
   background: linear-gradient(180deg, var(--c-bg) 0%, var(--c-surface-2) 100%);
   border-bottom: 1px solid var(--c-line);
 }
 .hero__inner {
   padding-block: clamp(var(--s-7), 8vw, var(--s-9));
+  padding-bottom: clamp(var(--s-8), 10vw, var(--s-9));
   max-width: 56rem;
   text-align: left;
 }
@@ -203,6 +205,32 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
   font-size: var(--fs-sm);
   color: var(--c-muted);
   margin: 0;
+}
+.hero__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: var(--s-4);
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--c-muted);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+.hero__scroll:hover,
+.hero__scroll:focus-visible {
+  color: var(--c-accent-2);
+  opacity: 1;
+}
+.hero__scroll-icon {
+  animation: hero-scroll-nudge 2.4s var(--ease) infinite;
+}
+@keyframes hero-scroll-nudge {
+  0%, 100% { transform: translateY(0); opacity: 0.55; }
+  50% { transform: translateY(0.35rem); opacity: 1; }
 }
 
 /* Buttons --------------------------------------------------------------- */
@@ -240,6 +268,7 @@ hr { border: 0; border-top: 1px solid var(--c-line); margin: var(--s-7) 0; }
 /* Home: prose sits directly above `.areas`; avoid doubling vertical padding. */
 .prose--home {
   padding-bottom: var(--s-5);
+  scroll-margin-top: 5rem;
 }
 .prose__header { max-width: var(--container-narrow); margin-bottom: var(--s-6); }
 .prose__lede {
